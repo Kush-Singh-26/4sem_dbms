@@ -1,7 +1,6 @@
 # LAB 3
 1. Display all employees with their commission value. Display 0 commission for employees who do not get any commission.
 ``` sql
-SP2-0734: unknown command beginning "SQL> selec..." - rest of line ignored.
 SQL> select fname || ' ' || lname as "NAME", nvl(commission,0) from employee;
 
 NAME                                                                                                  NVL(COMMISSION,0)
