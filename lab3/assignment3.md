@@ -45,7 +45,7 @@ Emily Brown                                                                     
 Michael Johnson                                                                                       12 NOVEMBER ,1998
 Sarah Davis                                                                                           25 FEBRUARY ,2002
 ```
-5. Find the average, highest, and lowest age for students.\
+5. Find the average, highest, and lowest age for students.
 ```sql
 SQL> select avg(extract(year from sysdate) - extract(year from birthdate)) as "AVERAGE AGE" from student;
 
@@ -66,20 +66,20 @@ SQL> select min(extract(year from sysdate) - extract(year from birthdate)) as "M
         23
 
 ```
-6. Display only the year value from each employee’s hire date.\
+6. Display only the year value from each employee’s hire date.
 ```sql
-SQL> select extract (year from hiredate) as "HIRE YEAR" from employee;
+SQL> select fname || ' ' || lname as "NAME",extract (year from hiredate) as "HIRE YEAR" from employee;
 
- HIRE YEAR
-----------
-      2020
-      2019
-      2018
-      2021
-      2022
-      2024
-      2023
-      2023
+NAME                                                                                                   HIRE YEAR
+----------------------------------------------------------------------------------------------------- ----------
+John Smith                                                                                                  2020
+Jane Doe                                                                                                    2019
+Emily Brown                                                                                                 2018
+Michael Johnson                                                                                             2021
+Sarah Davis                                                                                                 2022
+Liam Taylor                                                                                                 2024
+Olivia Martinez                                                                                             2023
+James Williams                                                                                              2023
 
 8 rows selected.
 ```
@@ -115,18 +115,18 @@ Biology I
 ```
 10. Find the number of years employees have been working for. Display integer part of value only.
 ```sql
-SQL> select extract(year from sysdate) - extract(year from hiredate) as "NO. of Years" from employee;
+SQL> select fname || ' ' || lname as "NAME", extract(year from sysdate) - extract(year from hiredate) as "NO. of Years" from employee;
 
-NO. of Years
-------------
-           5
-           6
-           7
-           4
-           3
-           1
-           2
-           2
+NAME                                                                                                  NO. of Years
+----------------------------------------------------------------------------------------------------- ------------
+John Smith                                                                                                       5
+Jane Doe                                                                                                         6
+Emily Brown                                                                                                      7
+Michael Johnson                                                                                                  4
+Sarah Davis                                                                                                      3
+Liam Taylor                                                                                                      1
+Olivia Martinez                                                                                                  2
+James Williams                                                                                                   2
 
 8 rows selected.
 ```
