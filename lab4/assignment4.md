@@ -69,7 +69,7 @@ Grant succeeded.
 
 ```sql
 SQL> INSERT INTO TERM (TERMID, TERMDESC, STARTDATE, ENDDATE)
-  2  VALUES (101, 'Winter', TO_DATE('01-JAN-2004', 'DD-MON-YYYY'), TO_DATE('31-MAR-2004', 'DD-MON-YYYY'));
+  2  VALUES (101, 'Winter 2004', TO_DATE('01-JAN-2004', 'DD-MON-YYYY'), TO_DATE('31-MAR-2004', 'DD-MON-YYYY'));
 
 1 row created.
 
@@ -77,7 +77,7 @@ SQL> SELECT * FROM TERM;
 
     TERMID TERMDESC                                                                                             STARTDATE ENDDATE
 ---------- ---------------------------------------------------------------------------------------------------- --------- ---------
-       101 Winter                                                                                               01-JAN-04 31-MAR-04
+       101 Winter 2004                                                                                          01-JAN-04 31-MAR-04
          1 Fall 2023                                                                                            01-SEP-23 15-DEC-23
          2 Spring 2024                                                                                          15-JAN-24 10-MAY-24
          3 Summer 2024                                                                                          01-JUN-24 15-AUG-24
@@ -97,7 +97,7 @@ SQL> SELECT * FROM KUSHSQL.TERM;
 
     TERMID TERMDESC                                                                                             STARTDATE ENDDATE
 ---------- ---------------------------------------------------------------------------------------------------- --------- ---------
-       101 Winter                                                                                               01-JAN-04 31-MAR-04
+       101 Winter 2004                                                                                          01-JAN-04 31-MAR-04
          1 Fall 2023                                                                                            01-SEP-23 15-DEC-23
          2 Spring 2024                                                                                          15-JAN-24 10-MAY-24
          3 Summer 2024                                                                                          01-JUN-24 15-AUG-24
