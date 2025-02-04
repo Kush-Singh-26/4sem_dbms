@@ -131,8 +131,6 @@ SQL> SELECT
 EMPLOYEEID Employee Name                    Department Name
 ---------- -------------------------------- ---------------
        104 Johnson, Michael                 Sales
-       104 Johnson, Michael                 Sales
-       104 Johnson, Michael                 Sales
 ```
 
 7) Display employee names and dependent information using an outer join.
@@ -202,8 +200,6 @@ SQL> SELECT
 Employee Name                    Department ID
 -------------------------------- -------------
 Johnson, Emily                              10
-
-SQL> select * from employee;
 ```
 
 ## Use the College database tables to design the following queries.
@@ -275,27 +271,6 @@ Davis, Sarah                     Dr. Evans                                      
 
 4) Get Spring 2003 course sections with the faculty member assigned to teach the class. Include course sections without any faculty assigned to them.
 ``` sql
-SELECT 
-    c.Title AS "Course Title",
-    cs.Section AS "Section",
-    f.Name AS "Faculty Name",
-    cs.TermId AS "Term ID"
-FROM 
-    CRSSECTION cs
-JOIN 
-    COURSE c ON cs.CourseId = c.CourseId
-LEFT JOIN 
-    FACULTY f ON cs.FacultyId = f.FacultyId
-JOIN 
-    TERM t ON cs.TermId = t.TermId
-WHERE 
-    t.TermDesc = 'Spring 2003';
-
-```
-
-5) Display course titles along with their prerequisite names. Display courses without prerequisite also.
-
-``` sql
 SQL> SELECT
   2      c.Title AS "Course Title",
   3      cs.Section AS "Section",
@@ -314,15 +289,16 @@ SQL> SELECT
 
 Course Title         S Faculty Name       Term ID
 -------------------- - --------------- ----------
+Biology I            A Dr. Evans                1
+Chemistry I          C Dr. Davis                1
 Mathematics I        A                          1
 Mathematics I        B                          1
-Physics I            A                          1
 Mathematics I        A Dr. Allen                1
-Chemistry I          C Dr. Davis                1
-Biology I            A Dr. Evans                1
+Physics I            A                          1
 
 6 rows selected.
 ```
+
 5) Display course titles along with their prerequisite names. Display courses without prerequisite also.
 ``` sql
 SQL> SELECT
