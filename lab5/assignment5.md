@@ -112,8 +112,6 @@ employee name                    department name position descri qualification d
 -------------------------------------------------------------------------------------------
 Doe, Jane                        Finance         Position 2      Master of Science
 Brown, Emily                     IT              Position 3      PhD in Computer Science
-Doe, Jane                        Finance         Position 2      Master of Science
-Brown, Emily                     IT              Position 3      PhD in Computer Science
 ```
 > If any employee is missing from the output, it indicates that there is no matching entry in one of these tables for that employee.
 
