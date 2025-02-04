@@ -22,6 +22,10 @@ SQL> SELECT
   7      employee s ON e.SUPERVISOR = s.EMPLOYEEID
   8  WHERE
   9      e.EMPLOYEEID = 433;
+
+employee name                   supervisor name
+------------------------------- -------------------------------
+John Doe                        Martinez Olivia
 ```
 
 3) Find all employees’ full names (lastname, firstname format) with salary, and their supervisor’s name with salary.
