@@ -155,7 +155,7 @@ DEPENDENTID EMPLOYEEID DEPDOB    RELATION
 ```
 
 11) Write a subquery that finds average salary by each department. Check to find if employee 543’s salary satisfies =ANY, <ANY, >ANY, <ALL, or >ALL condition against those departmental average salaries.
-> ANY
+> =ANY
 ``` sql
 SQL> SELECT SALARY
   2  FROM EMPLOYEE
